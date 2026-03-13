@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function LoyaltyApp() {
   const [view, setView] = useState('stamps'); 
-  const [stamps, setStamps] = useState(4); 
+  const [stamps, setStamps] = useState(0); 
   const [customerId] = useState(`CUST-${Math.floor(Math.random() * 9000) + 1000}`);
   
   const maxStamps = 10;
@@ -43,7 +43,7 @@ export default function LoyaltyApp() {
                       : 'bg-white border-slate-100 text-slate-100'
                     }`}
                   >
-                    {i < stamps ? '🍔' : ''}
+                    {i < stamps ? '🍆' : ''}
                   </div>
                 ))}
               </div>
